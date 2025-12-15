@@ -2,7 +2,7 @@ def part1(data: str) -> int:
     lines = data.strip().split('\n')
     dial_position = 50
     zero_check = 0
-
+# Process each line of input
     for line in lines:
         direction = line[0]
         clicks = int(line[1:])
@@ -16,12 +16,14 @@ def part1(data: str) -> int:
         if dial_position == 0:
             zero_check += 1
     return zero_check
+# Print Part 1 Result
 print(f"Part 1: {part1(open('Day1/input.txt').read())}")
-
+# Part 2
 def part2(data: str) -> int:
     lines = data.strip().split('\n')
     dial_position = 50
     zero_check = 0
+    # Process each line of input
     for line in lines:
         dial_direction = line[0]
         clicks = int(line[1:])
@@ -36,4 +38,5 @@ def part2(data: str) -> int:
             if dial_position == 0:
                 zero_check += 1
     return zero_check
+# Print Part 2 Result
 print(f"Part 2: {part2(open('Day1/input.txt').read())}")  
